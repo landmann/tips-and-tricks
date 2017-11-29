@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/Users/landmann'
+let g:netrw_dirhist_2='/Users/landmann/Documents'
+let g:netrw_dirhist_3='/Users/landmann/Documents/Academics'
+let g:netrw_dirhist_4='/Users/landmann/Documents/Academics/Spring 2017'
+let g:netrw_dirhist_5='/Users/landmann/Documents/Academics'
+let g:netrw_dirhist_6='/Users/landmann/Documents/Academics/Fall 2017'
+let g:netrw_dirhist_7='/Users/landmann/Documents/Academics/Fall 2017/6.869'
+let g:netrw_dirhist_8='/Users/landmann/Documents/Academics/Fall 2017/6.869/Final Project'
+let g:netrw_dirhist_9='/Users/landmann'
