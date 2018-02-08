@@ -17,7 +17,7 @@ jupyter contrib nbextension install --user
 jupyter nbextensions_configurator enable --user
 ```
 
-<li> Install <a href=https://github.com/lambdalisue/jupyter-vim-binding/wiki/Installation>VIM bindings</a> :</li>
+<li> Install <a href=https://github.com/lambdalisue/jupyter-vim-binding/wiki/Installation>Vim bindings</a> :</li>
   
 ```bash
 # You may need the following to create the directoy
@@ -27,5 +27,9 @@ cd $(jupyter --data-dir)/nbextensions
 git clone https://github.com/lambdalisue/jupyter-vim-binding vim_binding
 chmod -R go-w vim_binding
 ```
-  
+[Re]Start your jupyter notebooks and make sure you can see the nbextensions tab at the tree folder's bar (right under Jupyter).  It should say <i>Files -- Running -- Clusters -- Nbextensions</i>
+
+<li> <a href=https://github.com/lambdalisue/jupyter-vim-binding#customization>Configure Mappings</a> </li>
+Enable the <i> Keyboard Shortcuts </i> extension in the <i>Nbextensions</i> tab.
+
 </ol>
