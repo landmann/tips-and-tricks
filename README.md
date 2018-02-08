@@ -30,6 +30,11 @@ chmod -R go-w vim_binding
 [Re]Start your jupyter notebooks and make sure you can see the nbextensions tab at the tree folder's bar (right under Jupyter).  It should say <i>Files -- Running -- Clusters -- Nbextensions</i>
 
 <li> <a href=https://github.com/lambdalisue/jupyter-vim-binding#customization>Configure Mappings</a> </li>
+`bash
+cd ~/.jupyter/custom/custom.css
+`
+
+
 Enable the <i> Keyboard Shortcuts </i> extension in the <i>Nbextensions</i> tab.
 
 </ol>
