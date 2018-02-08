@@ -23,7 +23,7 @@ This guide sets you up for working in IPython with Jupyter using VIM commands, w
 <li> Install VIM bindings :</li>
  <ol>
   
-```
+```bash
 # You may need the following to create the directoy
 mkdir -p $(jupyter --data-dir)/nbextensions
 # Now clone the repository
