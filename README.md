@@ -10,7 +10,9 @@ This guide sets you up for working in IPython with Jupyter using VIM commands, w
 
 1. Install [nbextensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions#installation):
 -`pip install jupyter_contrib_nbextensions`
+
 -`jupyter contrib nbextension install --user`
+
 -`jupyter nbextensions_configurator enable --user`
 
 
