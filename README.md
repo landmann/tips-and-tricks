@@ -10,18 +10,13 @@ This guide sets you up for working in IPython with Jupyter using VIM commands, w
 
 <ol>
 <li> 1. Install [nbextensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions#installation):</li>
-  <ol>
-    <li> 
-      
-      `pip install jupyter_contrib_nbextensions`      
-      
-    </li>
-    <li>  `jupyter contrib nbextension install --user`      </li>
-    <li>  `jupyter nbextensions_configurator enable --user` </li>
-  </ol>
+```bash  
+pip install jupyter_contrib_nbextensions`        
+jupyter contrib nbextension install --user
+jupyter nbextensions_configurator enable --user
+```
 
 <li> Install VIM bindings :</li>
- <ol>
   
 ```bash
 # You may need the following to create the directoy
@@ -31,7 +26,5 @@ cd $(jupyter --data-dir)/nbextensions
 git clone https://github.com/lambdalisue/jupyter-vim-binding vim_binding
 chmod -R go-w vim_binding
 ```
-
-  </ol>
   
- </ol>
+</ol>
