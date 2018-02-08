@@ -77,6 +77,4 @@ require([
 });
 ```
 
-Enable the <i> Keyboard Shortcuts </i> extension in the <i>Nbextensions</i> tab.
-
 </ol>
