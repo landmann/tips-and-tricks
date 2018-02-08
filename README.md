@@ -31,7 +31,9 @@ chmod -R go-w vim_binding
 
 <li> <a href=https://github.com/lambdalisue/jupyter-vim-binding#customization>Configure Mappings</a> </li>
 Type 
+
 `ls ~/.jupyter/custom`
+
 If it exists, then type:
 
 ```bash
