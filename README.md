@@ -30,7 +30,7 @@ chmod -R go-w vim_binding
 [Re]Start your jupyter notebooks and make sure you can see the nbextensions tab at the tree folder's bar (right under Jupyter).  It should say <i>Files -- Running -- Clusters -- Nbextensions</i>
 
 <li> <a href=https://github.com/lambdalisue/jupyter-vim-binding#customization>Configure Mappings</a> </li>
-Type `ls ~/.jupyter/custom`. If it exists, then type:
+Type `ls ~/.jupyter/custom` . If it exists, then type:
 
 ```bash
 vim ~/.jupyter/custom/custom.js
