@@ -6,7 +6,7 @@
 
 # Jupyter Setup
 
-This guide sets you up for working in IPython with Jupyter using VIM commands, with a few modifications for personalization.  You can get more info by going to the specific sites, but these are too wordy and cumbersom for a quick setup.
+This guide sets you up for working in IPython with Jupyter using VIM commands, with a few personalized modifications.  You can get more info by going to the specific sites, but these are too wordy and cumbersom for a quick setup.
 
 <ol>
 <li> Install <a href=https://github.com/ipython-contrib/jupyter_contrib_nbextensions#installation>nbextensions</a> :</li>
@@ -30,7 +30,7 @@ chmod -R go-w vim_binding
 [Re]Start your jupyter notebooks and make sure you can see the nbextensions tab at the tree folder's bar (right under Jupyter).  It should say <i>Files -- Running -- Clusters -- Nbextensions</i>
 
 <li> <a href=https://github.com/lambdalisue/jupyter-vim-binding#customization>Configure Mappings</a> </li>
-Type 
+Now we are going to modify jupyter's config file.
 
 `ls ~/.jupyter/custom`
 
