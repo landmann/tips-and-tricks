@@ -80,5 +80,21 @@ require([
   });
 });
 ```
+In the same folder, type 
+```bash
+vim custom.css
+```
 
+and enter this for prettier colors:
+```css
+/* Jupyter cell is in normal mode when code mirror */
+.edit_mode .cell.selected .CodeMirror-focused.cm-fat-cursor {
+  /*background-color: #F5F6EB !important; */
+    background-color: #F5F6EB !important;
+}
+/* Jupyter cell is in insert mode when code mirror */
+.edit_mode .cell.selected .CodeMirror-focused:not(.cm-fat-cursor) {
+  background-color: #F0F8FF !important;
+}
+```
 </ol>
