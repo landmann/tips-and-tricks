@@ -82,7 +82,7 @@ require([
 ```
 In the same folder, type 
 ```bash
-vim custom.css
+vim ~/.jupyter/custom/custom.css
 ```
 
 and enter this for prettier colors:
