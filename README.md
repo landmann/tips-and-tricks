@@ -30,7 +30,7 @@ chmod -R go-w vim_binding
 ```
 [Re]Start your jupyter notebooks and make sure you can see the nbextensions tab at the tree folder's bar (right under Jupyter).  It should say <i>Files -- Running -- Clusters -- Nbextensions</i>
 
-#### 3. <a href=https://github.com/lambdalisue/jupyter-vim-binding#customization>Configure Mappings</a> 
+#### 3. Configure <a href=https://github.com/lambdalisue/jupyter-vim-binding#customization>Mappings</a> 
 Now we are going to modify jupyter's config file.
 
 `ls ~/.jupyter/custom`
