@@ -1,5 +1,6 @@
 # vim-setup
 
+My vimrc is a combination of many things I've read in the iternet.  Here's a list of the things I've read and what I've found out. For the actual file, you can find it [here](https://github.com/landmann/vim-setup/blob/master/.vimrc).
 
 
 
