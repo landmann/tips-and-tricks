@@ -1,9 +1,21 @@
 # vim-setup
 
-My vimrc is a combination of many things I've read in the iternet.  Here's a list of the things I've read and what I've found out. For the actual file, you can find it [here](https://github.com/landmann/vim-setup/blob/master/.vimrc).
+My vimrc is a combination of many things I've read in the iternet that have worked very well for my purposes.  Here's a list of the things I've read that have changed my setup. You can find the vimrc file [here](https://github.com/landmann/vim-setup/blob/master/.vimrc).
+
+### From Ian Langworth's ['Vim After 11 Years'](https://statico.github.io/vim.html)
+
+- He uses backslash '\' quite extensively in his vim mode. For example, `\o` toggles paste mode and `\l` toggles line numbers:
+
+`nmap \l :setlocal number!<CR>`
+`nmap \o :set paste!<CR>`
 
 
+- Native vim will jump from line to line regardless of the wrapped around text.  Add the following lines to your vimrc to not skip the wrapped part of the lines.
 
+  `nmap j gj`
+  `nmap k gk`
+
+- 
 
 # Jupyter Setup
 
