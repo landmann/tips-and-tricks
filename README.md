@@ -49,7 +49,8 @@ My vimrc is a combination of many things I've read in the iternet that have work
 
 - I use iTerm, so I believe you need this for nice colors:
 
-```if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
+```
+if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gnome-terminal"
    set t_Co=256
 endif
 ```
