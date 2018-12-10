@@ -2,6 +2,13 @@
 
 My vimrc is a combination of many things I've read in the iternet that have worked very well for my purposes.  Here's a list of the things I've read that have changed my setup. You can find the vimrc file [here](https://github.com/landmann/vim-setup/blob/master/.vimrc).
 
+### Quick Install
+
+- Type `locate .vimrc` and clone the contents of this repo into said directory.
+- Install Pathogen, as described [here](https://github.com/tpope/vim-pathogen).
+- Install Vundle as described [here](https://github.com/VundleVim/Vundle.vim).
+- Type `source ~/.bashrc` if you're having any issues with these installations to make sure your bash has been updated after these were processed.
+
 ### From Ian Langworth's ['Vim After 11 Years'](https://statico.github.io/vim.html)
 
 - He uses backslash '\' quite extensively in his vim mode. For example, `\o` toggles paste mode and `\l` toggles line numbers:
