@@ -180,7 +180,7 @@ and enter this for prettier colors:
 
 A Power Shell is a huge timesaver.  It'll help you navigate through files a lot faster with nice autocomplete, amongst other features.  
 
-## Quick Install
+### Quick Install
 1. Install zsh from [here](https://www.howtoforge.com/tutorial/how-to-setup-zsh-and-oh-my-zsh-on-linux/)
 
 
