@@ -1,4 +1,4 @@
-# vim-setup
+# Vim Setup on Terminal and Jupyter
 
 My vimrc is a combination of many things I've read in the iternet that have worked very well for my purposes.  Here's a list of the things I've read that have changed my setup. You can find the vimrc file [here](https://github.com/landmann/vim-setup/blob/master/.vimrc).
 
