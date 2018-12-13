@@ -1,5 +1,11 @@
 # Vim Setup on Terminal and Jupyter
 
+This guide will take you through a quick setup of [vim on terminal](https://github.com/landmann/vim-setup#terminal-vim) and [vim on jupyter](https://github.com/landmann/vim-setup#jupyter-setup). You may add the contents of this repo into the home directory, `~/.` and follow the instructions on [Quick Install](https://github.com/landmann/vim-setup#quick-install) to install vim on terminal. I have not provided a file for jupyter in this directory, but you can find the code for it below.
+
+Last but not least, I'm in the process of writing a PowerShell guide using [ZSH](https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/), which you can find at the bottom of [this page](https://github.com/landmann/vim-setup#zsh-installation) 
+
+# Terminal Vim
+
 My vimrc is a combination of many things I've read in the iternet that have worked very well for my purposes.  Here's a list of the things I've read that have changed my setup. You can find the vimrc file [here](https://github.com/landmann/vim-setup/blob/master/.vimrc).
 
 ### Quick Install
@@ -169,3 +175,15 @@ and enter this for prettier colors:
   background-color: #F0F8FF !important;
 }
 ```
+
+# ZSH Installation
+
+A Power Shell is a huge timesaver.  It'll help you navigate through files a lot faster with nice autocomplete, amongst other features.  
+
+## Quick Install
+1. Install zsh from [here](https://www.howtoforge.com/tutorial/how-to-setup-zsh-and-oh-my-zsh-on-linux/)
+
+
+
+
+
