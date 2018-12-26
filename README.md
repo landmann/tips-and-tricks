@@ -2,7 +2,7 @@
 
 This guide will take you through a quick setup of [vim on terminal](https://github.com/landmann/vim-setup#terminal-vim) and [vim on jupyter](https://github.com/landmann/vim-setup#jupyter-setup). You may add the contents of this repo into the home directory, `~/.` and follow the instructions on [Quick Install](https://github.com/landmann/vim-setup#quick-install) to install vim on terminal. I have not provided a file for jupyter in this directory, but you can find the code for it below.
 
-Last but not least, I'm in the process of writing a PowerShell guide using [ZSH](https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/), which you can find at the bottom of [this page](https://github.com/landmann/vim-setup#zsh-installation) 
+Last but not least, I'm in the process of writing a PowerShell guide using [ZSH](https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/), which you can find at the bottom of [this page](https://github.com/landmann/vim-setup#zsh-installation).
 
 # Terminal Vim
 
@@ -95,6 +95,15 @@ jupyter contrib nbextension install --user
 jupyter nbextensions_configurator enable --user
 ```
 
+The extensions I use are: 
+
+<ul>
+<li>Ruler</li>
+<li>ExecuteTime</li>
+<li>VIM binding (below)</li>
+<li>Nbextensions edit menu item</li>
+</ul>
+
 #### 2. Install <a href=https://github.com/lambdalisue/jupyter-vim-binding/wiki/Installation>Vim bindings</a> :
   
 ```bash
@@ -107,7 +116,19 @@ chmod -R go-w vim_binding
 ```
 [Re]Start your jupyter notebooks and make sure you can see the nbextensions tab at the tree folder's bar (right under Jupyter).  It should say <i>Files -- Running -- Clusters -- Nbextensions</i>
 
-#### 3. Configure <a href=https://github.com/lambdalisue/jupyter-vim-binding#customization>Mappings</a> 
+#### 3. Add my favorite <a href=https://github.com/dunovank/jupyter-themes>jupyter theme</a>
+
+Install the themes with
+
+```pip install jupyterthemes
+```
+List the themes as
+```jt -l
+```
+
+
+
+#### 4. Configure <a href=https://github.com/lambdalisue/jupyter-vim-binding#customization>Mappings</a> 
 Now we are going to modify jupyter's config file.
 
 `ls ~/.jupyter/custom`
@@ -122,7 +143,7 @@ Else, type
 mkdir ~/.jupyter/custom
 vim ~/.jupyter/custom/custom.js
 ```
-Now, in vim, type `:set paste` and paste this
+Now, in vim, type `:set paste` and paste this at the end of the file:
 ```bash
 // Configure CodeMirror Keymap
 require([
@@ -163,18 +184,31 @@ In the same folder, type
 vim ~/.jupyter/custom/custom.css
 ```
 
-and enter this for prettier colors:
+and enter this for prettier colors. Add it at the end of the file too, right before `<script>`:
+
 ```css
 /* Jupyter cell is in normal mode when code mirror */
 .edit_mode .cell.selected .CodeMirror-focused.cm-fat-cursor {
-  /*background-color: #F5F6EB !important; */
-    background-color: #F5F6EB !important;
+    background-color: #232e3f !important;
 }
+
 /* Jupyter cell is in insert mode when code mirror */
 .edit_mode .cell.selected .CodeMirror-focused:not(.cm-fat-cursor) {
-  background-color: #F0F8FF !important;
+  background-color: #273345 !important;
 }
 ```
+
+Last but not least, we should change the way things are plotted. To do this, include the following two lines in `~/.ipython/profile_default/startup/startup.ipy` file to set plotting style automatically whenever you start a notebook:
+
+```
+# import jtplot submodule from jupyterthemes
+from jupyterthemes import jtplot
+
+# currently installed theme will be used to
+# set plot style if no arguments provided
+jtplot.style()
+```
+Refer to this [manual](https://github.com/dunovank/jupyter-themes#set-plotting-style-from-within-notebook) for more info.
 
 # ZSH Installation
 
