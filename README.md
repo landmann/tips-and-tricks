@@ -122,8 +122,8 @@ Install the themes with
 
 ```pip install jupyterthemes
 ```
-List the themes as
-```jt -l
+and include the dark style that suits you best. Here's the author's and what I currently use:
+```jt -t onedork -fs 95 -altp -tfs 11 -nfs 115 -cellw 88% -T
 ```
 
 
@@ -208,6 +208,7 @@ from jupyterthemes import jtplot
 # set plot style if no arguments provided
 jtplot.style()
 ```
+
 Refer to this [manual](https://github.com/dunovank/jupyter-themes#set-plotting-style-from-within-notebook) for more info.
 
 # ZSH Installation
