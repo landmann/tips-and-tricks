@@ -116,7 +116,7 @@ chmod -R go-w vim_binding
 ```
 [Re]Start your jupyter notebooks and make sure you can see the nbextensions tab at the tree folder's bar (right under Jupyter).  It should say <i>Files -- Running -- Clusters -- Nbextensions</i>
 
-#### 3. Add my favorite <a href=https://github.com/dunovank/jupyter-themes>jupyter theme</a>
+#### 3. Add a <a href=https://github.com/dunovank/jupyter-themes>jupyter theme</a>
 
 Install the themes with
 
