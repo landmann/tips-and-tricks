@@ -120,10 +120,12 @@ chmod -R go-w vim_binding
 
 Install the themes with
 
-```pip install jupyterthemes
+```bash
+pip install jupyterthemes
 ```
 and include the dark style that suits you best. Here's the author's and what I currently use:
-```jt -t onedork -fs 95 -altp -tfs 11 -nfs 115 -cellw 88% -T
+```bash
+jt -t onedork -fs 95 -altp -tfs 11 -nfs 115 -cellw 88% -T
 ```
 
 
@@ -200,7 +202,7 @@ and enter this for prettier colors. Add it at the end of the file too, right bef
 
 Last but not least, we should change the way things are plotted. To do this, include the following two lines in `~/.ipython/profile_default/startup/startup.ipy` file to set plotting style automatically whenever you start a notebook:
 
-```
+```python
 # import jtplot submodule from jupyterthemes
 from jupyterthemes import jtplot
 
