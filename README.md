@@ -199,6 +199,7 @@ and enter this for prettier colors. Add it at the end of the file too, right bef
   background-color: #273345 !important;
 }
 ```
+#### 5. Plotting
 
 Last but not least, we should change the way things are plotted. To do this, include the following two lines in `~/.ipython/profile_default/startup/startup.ipy` file to set plotting style automatically whenever you start a notebook:
 
@@ -212,6 +213,15 @@ jtplot.style()
 ```
 
 Refer to this [manual](https://github.com/dunovank/jupyter-themes#set-plotting-style-from-within-notebook) for more info.
+
+#### 6. Note on Kernels
+
+For some reason, my kernel disappeared when I installed the theme. To install it again, follow the instructions [here](https://stackoverflow.com/questions/28831854/how-do-i-add-python3-kernel-to-jupyter-ipython):
+
+```bash
+python3 -m pip install ipykernel
+python3 -m ipykernel install --user
+```
 
 # ZSH Installation
 
