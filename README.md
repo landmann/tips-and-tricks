@@ -191,11 +191,15 @@ and enter this for prettier colors. Add it at the end of the file too, right bef
 ```css
 /* Jupyter cell is in normal mode when code mirror */
 .edit_mode .cell.selected .CodeMirror-focused.cm-fat-cursor {
+/*For white backgrounds, use #F0F8FF: */
+  /*background-color: #F5F6EB !important;*/ 
     background-color: #232e3f !important;
 }
 
 /* Jupyter cell is in insert mode when code mirror */
 .edit_mode .cell.selected .CodeMirror-focused:not(.cm-fat-cursor) {
+/*For white backgrounds, use #F0F8FF: */
+/*background-color: #F0F8FF !important;*/ 
   background-color: #273345 !important;
 }
 ```
