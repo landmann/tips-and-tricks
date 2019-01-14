@@ -237,4 +237,10 @@ A Power Shell is a huge timesaver.  It'll help you navigate through files a lot 
 
 
 
+# AWS Instance
+
+If you'd like to mount an efs on your aws:
+1. install awscli: `pip install awscli --upgrade --user`
+2. Change the config file with `awscli configure`.
+3. Change the security group of your ec2 instance to add the efs following the instructions in the efs page.
 
