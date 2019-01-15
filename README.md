@@ -14,6 +14,7 @@ My vimrc is a combination of many things I've read in the iternet that have work
 - Install Pathogen, as described [here](https://github.com/tpope/vim-pathogen).
 - Install Vundle as described [here](https://github.com/VundleVim/Vundle.vim).
 - Type `source ~/.bashrc` if you're having any issues with these installations to make sure your bash has been updated after these were processed.
+- This one is used quite a bit too: https://github.com/xolox/vim-notes
 
 ### From Ian Langworth's ['Vim After 11 Years'](https://statico.github.io/vim.html)
 
