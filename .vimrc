@@ -9,6 +9,10 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'davidhalter/jedi-vim'
 Plugin 'ervandew/supertab'
+Plugin 'scrooloose/nerdtree.git'
+Plugin 'xolox/vim-misc'
+Plugin 'xolox/vim-notes'
+Plugin 'Yggdroot/indentLine'
 call vundle#end()
 
 execute pathogen#infect()
@@ -19,10 +23,6 @@ if $TERM == "xterm-256color" || $TERM == "screen-256color" || $COLORTERM == "gno
 endif
 
 ""To abbreviate things: abbr pn penguin
-
-"Move between windows
-map <C-j> <C-W>j
-map <C-k> <C-W>k
 
 inoremap jk <ESC>
 syntax on
@@ -44,6 +44,13 @@ nmap \w setlocal wrap!<CR>:setlocal wrap?<CR>
 "move down one line only, regardless of wrapped around lines
 nnoremap j gj
 nnoremap k gk
+
+"Move between windows
+nmap <C-J> <C-W><C-J>
+nmap <C-K> <C-W><C-K>
+nmap <C-L> <C-W><C-L>
+nmap <C-H> <C-W><C-H>
+
 "Toggle line numbers:
 nmap \l :setlocal number!<CR>
 "Toggle paste mode:
@@ -55,7 +62,7 @@ nmap <C-n> :bnext<CR>
 nmap <C-p> :bprev<CR>
 "Lets you back up to previous file with Ctrl-E
 "   To get to another file type :e something.py
-nmap <C-e> :e#<CR> 
+nmap <C-e> :e#<CR>
 
 nnoremap <Tab> >>_
 nnoremap <S-Tab> <<_
@@ -72,9 +79,9 @@ nmap \q :nohlsearch<CR>
 set autowrite
 
 """ Incsearch: Search Mappings
-map /  <Plug>(incsearch-forward)
-map ?  <Plug>(incsearch-backward)
-map g/ <Plug>(incsearch-stay)
+""" map /  <Plug>(incsearch-forward)
+""" map ?  <Plug>(incsearch-backward)
+""" map g/ <Plug>(incsearch-stay)
 
 """ Ctrlp: mappings to quickly switch between files
 nmap ; :CtrlPBuffer<CR>
@@ -93,7 +100,7 @@ let g:jedi#use_tabs_not_buffers = 1
 let g:jedi#use_splits_not_buffers = 'right'
 
 """ Syntastic: the linter.
-set statusline+=%#warningmsg# 
+set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 let g:syntastic_always_populate_loc_list = 1
@@ -101,6 +108,8 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
+"indentLine
+let g:indentLine_setColors = 0
 
 "Emacs style movement
 cnoremap <C-a> <Home>
@@ -114,19 +123,6 @@ cnoremap <Esc>b <S-Left>
 cnoremap <Esc>f <S-Right>
 cnoremap <Esc>d <S-right><Delete>
 cnoremap <C-g> <C-c>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
