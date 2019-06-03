@@ -214,7 +214,7 @@ from jupyterthemes import jtplot
 
 # currently installed theme will be used to
 # set plot style if no arguments provided
-jtplot.style()
+jtplot.style(theme='onedork', figsize=(18, 10), fscale=1.4, context='talk', ticks=True)
 ```
 
 Refer to this [manual](https://github.com/dunovank/jupyter-themes#set-plotting-style-from-within-notebook) for more info.
@@ -231,18 +231,17 @@ python3 -m ipykernel install --user
 #### 7. Sometimes the jupyter notebook kernel doesn't start where it should be (`sys.executable` returns the wrong python kernel). This is because our kernel list isn't updated properly. To do so, go to `~/.local/share/jupyter/kernels/{envname}/kernel.json` and change the first parameter in the `argv` list to the python path in your specific kernel.
 
 ```
-  1 {
-  2  argv: [
-  3   {/path/to/kernel/environment/folder}/bin/python,
-  4   -m,
-  5   ipykernel_launcher,
-  6   -f,
-  7   {connection_file}
-  8  ],
-  9  display_name: env-proprog,
- 10  language: python
- 11 }
-
+  {
+   argv: [
+    {/path/to/kernel/environment/folder}/bin/python,
+    -m,
+    ipykernel_launcher,
+    -f,
+    {connection_file}
+   ],
+   display_name: env-proprog,
+   language: python
+ }
 ```
 
 # ZSH Installation
