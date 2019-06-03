@@ -228,6 +228,23 @@ python3 -m pip install ipykernel
 python3 -m ipykernel install --user
 ```
 
+#### 7. Sometimes the jupyter notebook kernel doesn't start where it should be (`sys.executable` returns the wrong python kernel). This is because our kernel list isn't updated properly. To do so, go to `~/.local/share/jupyter/kernels/{envname}/kernel.json` and change the first parameter in the `argv` list to the python path in your specific kernel.
+
+```
+  1 {
+  2  argv: [
+  3   {/path/to/kernel/environment/folder}/bin/python,
+  4   -m,
+  5   ipykernel_launcher,
+  6   -f,
+  7   {connection_file}
+  8  ],
+  9  display_name: env-proprog,
+ 10  language: python
+ 11 }
+
+```
+
 # ZSH Installation
 
 A Power Shell is a huge timesaver.  It'll help you navigate through files a lot faster with nice autocomplete, amongst other features.  
