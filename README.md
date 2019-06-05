@@ -219,22 +219,13 @@ jtplot.style(theme='onedork', figsize=(18, 10), fscale=1.4, context='talk', tick
 
 Refer to this [manual](https://github.com/dunovank/jupyter-themes#set-plotting-style-from-within-notebook) for more info.
 
-#### 6. Note on Kernels
+#### 6. Creating a Virtual Env
 
-For some reason, my kernel disappeared when I installed the theme. To install it again, follow the instructions [here](https://stackoverflow.com/questions/28831854/how-do-i-add-python3-kernel-to-jupyter-ipython):
-
-```bash
-python3 -m pip install ipykernel
-python3 -m ipykernel install --user
-```
-
-#### 7. Creating a Virtual Env
-
-If you want to work with a virtual env (which you absolutely should if you're not usind Docker), run these commands:
+If you want to work with a virtual env (which you absolutely should if you're not using a containerized solution), run these commands:
 
 ```bash
 pip3 install virtualenv
-virtualenv {envname}
+virtualenv --python=python{ version you like such as 3.6 } {envname}
 source {envname}/bin/activate
 ...
 python3 -m pip install ipykernel
@@ -244,7 +235,7 @@ deactivate
 ```
 
 
-#### 8. Updating Library Location
+#### 7. Updating Library Location
 
 Sometimes the jupyter notebook kernel doesn't start where it should be (`sys.executable` returns the wrong python kernel). This is because our kernel list isn't updated properly. To do so, go to `~/.local/share/jupyter/kernels/{envname}/kernel.json` and change the first parameter in the `argv` list to the python path in your specific kernel.
 
