@@ -224,12 +224,15 @@ Refer to this [manual](https://github.com/dunovank/jupyter-themes#set-plotting-s
 If you want to work with a virtual env (which you absolutely should if you're not using a containerized solution), run these commands:
 
 ```bash
+NEWENVNAME=envname
+NEWENV_PYTHON_VERSION=python3.6
+
 pip3 install virtualenv
-virtualenv --python=python{ version you like such as 3.6 } {envname}
-source {envname}/bin/activate
+virtualenv --python=$NEWENV_PYTHON_VERSION $NEWENVNAME
+source $NEWENVNAME/bin/activate
 ...
 python3 -m pip install ipykernel
-python -m ipykernel install --user --name {envmane} --display-name "{whatever-you-want}"
+python -m ipykernel install --user --name $NEWENVNAME --display-name "$NEWENVNAME"
 ...
 deactivate
 ```
