@@ -234,11 +234,11 @@ If you want to work with a virtual env (which you absolutely should if you're no
 
 ```bash
 pip3 install virtualenv
-virtualenv {foldername}
-source {foldername}/bin/activate
+virtualenv {envname}
+source {envname}/bin/activate
 ...
 python3 -m pip install ipykernel
-python3 -m ipykernel install --user
+python -m ipykernel install --user --name {envmane} --display-name "{whatever-you-want}"
 ...
 deactivate
 ```
@@ -248,7 +248,7 @@ deactivate
 
 Sometimes the jupyter notebook kernel doesn't start where it should be (`sys.executable` returns the wrong python kernel). This is because our kernel list isn't updated properly. To do so, go to `~/.local/share/jupyter/kernels/{envname}/kernel.json` and change the first parameter in the `argv` list to the python path in your specific kernel.
 
-```json
+```python
   {
    argv: [
     {/path/to/kernel/environment/folder}/bin/python,
