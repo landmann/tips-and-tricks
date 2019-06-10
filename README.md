@@ -1,6 +1,6 @@
 # Vim Setup on Terminal and Jupyter
 
-This guide will take you through a quick setup of [vim on terminal](https://github.com/landmann/vim-setup#terminal-vim) and [vim on jupyter](https://github.com/landmann/vim-setup#jupyter-setup). You may add the contents of this repo into the home directory, `~/.` and follow the instructions on [Quick Install](https://github.com/landmann/vim-setup#quick-install) to install vim on terminal. I have not provided a file for jupyter in this directory, but you can find the code for it below.
+This guide will take you through a quick setup of [vim on terminal](https://github.com/landmann/vim-setup#terminal-vim), [vim on jupyter](https://github.com/landmann/vim-setup#jupyter-setup), and [virtual environments](https://github.com/landmann/vim-setup#virtual-environments). You may add the contents of this repo into the home directory, `~/.` and follow the instructions on [Quick Install](https://github.com/landmann/vim-setup#quick-install) to install vim on terminal. I have not provided a file for jupyter in this directory, but you can find the code for it below.
 
 Last but not least, I'm in the process of writing a PowerShell guide using [ZSH](https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/), which you can find at the bottom of [this page](https://github.com/landmann/vim-setup#zsh-installation).
 
@@ -219,7 +219,7 @@ jtplot.style(theme='onedork', figsize=(18, 10), fscale=1.4, context='talk', tick
 
 Refer to this [manual](https://github.com/dunovank/jupyter-themes#set-plotting-style-from-within-notebook) for more info.
 
-#### 6. Creating a Virtual Env
+# Virtual Environments
 
 If you want to work with a virtual env (which you absolutely should if you're not using a containerized solution), run these commands:
 
@@ -238,7 +238,7 @@ deactivate
 ```
 
 
-#### 7. Updating Library Location
+#### Jupyter and Virtual Envs
 
 Sometimes the jupyter notebook kernel doesn't start where it should be (`sys.executable` returns the wrong python kernel). This is because our kernel list isn't updated properly. To do so, go to `~/.local/share/jupyter/kernels/{envname}/kernel.json` and change the first parameter in the `argv` list to the python path in your specific kernel.
 
