@@ -1,6 +1,6 @@
 # Vim Setup on Terminal and Jupyter
 
-This guide will take you through a quick setup of [vim on terminal](https://github.com/landmann/vim-setup#terminal-vim), [vim on jupyter](https://github.com/landmann/vim-setup#jupyter-setup), and [virtual environments](https://github.com/landmann/vim-setup#virtual-environments). You may add the contents of this repo into the home directory, `~/.` and follow the instructions on [Quick Install](https://github.com/landmann/vim-setup#quick-install) to install vim on terminal. I have not provided a file for jupyter in this directory, but you can find the code for it below.
+This guide will take you through a quick setup of [vim on terminal](https://github.com/landmann/vim-setup#terminal-vim), [vim on jupyter](https://github.com/landmann/vim-setup#jupyter-setup), [virtual environments](https://github.com/landmann/vim-setup#virtual-environments), and [ssh keys](https://github.com/landmann/vim-setup#ssh-keys). You may add the contents of this repo into the home directory, `~/.` and follow the instructions on [Quick Install](https://github.com/landmann/vim-setup#quick-install) to install vim on terminal. I have not provided a file for jupyter in this directory, but you can find the code for it below.
 
 Last but not least, I'm in the process of writing a PowerShell guide using [ZSH](https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/), which you can find at the bottom of [this page](https://github.com/landmann/vim-setup#zsh-installation).
 
@@ -255,6 +255,42 @@ Sometimes the jupyter notebook kernel doesn't start where it should be (`sys.exe
    language: python
  }
 ```
+
+# SSH Keys
+[Guide for this.](https://coderwall.com/p/7smjkq/multiple-ssh-keys-for-different-accounts-on-github-or-gitlab)
+
+Generate the SSH key you want to use with the following command:
+
+```bash
+$ ssh-keygen -t rsa -C "your_name@email_domain.com"
+```
+Make sure the key is cached by typing:
+```bash
+$ ssh-add -l
+```
+If no keys appear, then add the key by typing:
+```bash
+$ ssh-add ~/.ssh/id_rsa
+```
+
+To have all connections linked to the same id_rsa key, add this line of code to `~/.ssh/config`:
+
+```config
+Host *
+    AddKeysToAgent yes
+    PreferredAuthentications publickey
+    IdentityFile ~/.ssh/id_rsa
+```
+
+Lastly, check that the connections work:
+
+```bash
+$ ssh -T git@github.com
+Hi {user}! You've successfully authenticated, but GiHub does not provide shell access.
+$ ssh -T git@gitlab.work.io
+Welcome to GitLab, @{user}!
+```
+
 
 # ZSH Installation
 
