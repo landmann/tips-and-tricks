@@ -2,6 +2,7 @@ set nocompatible
 filetype off
 
 set splitright
+set undofile
 
 " Keep Plugin commands between vundel#begin/end.
 set rtp+=~/.vim/bundle/Vundle.vim
