@@ -291,6 +291,10 @@ $ ssh -T git@gitlab.work.io
 Welcome to GitLab, @{user}!
 ```
 
+# Best practices for working with AWS keys
+
+Set environment variables in the `~/.bash_profile` by typing `export {variable}='{definition}'` and then do `source ~/.bash_profile` to update the source.
+
 
 # ZSH Installation
 
