@@ -1,4 +1,4 @@
-# Vim Setup on Terminal and Jupyter
+# Tips and Tricks of the Trade
 
 This guide will take you through a quick setup of [vim on terminal](https://github.com/landmann/vim-setup#terminal-vim), [vim on jupyter](https://github.com/landmann/vim-setup#jupyter-setup), [virtual environments](https://github.com/landmann/vim-setup#virtual-environments), and [ssh keys](https://github.com/landmann/vim-setup#ssh-keys). You may add the contents of this repo into the home directory, `~/.` and follow the instructions on [Quick Install](https://github.com/landmann/vim-setup#quick-install) to install vim on terminal. I have not provided a file for jupyter in this directory, but you can find the code for it below.
 
