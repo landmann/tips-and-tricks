@@ -297,9 +297,11 @@ Set environment variables in the `~/.bash_profile` by typing `export {variable}=
 
 # Building Docker Images
 
+Every time the docker image is {re}built, run this from the main directory (the one with `Dockerfile`):
+`$docker build -t {new_image_name} .`
 
-`docker build -t {new_image_name} .`
-`docker-compose up`
+And then run this command where the `docker-compose.yml` file is:
+`$docker-compose up`
 
 
 # ZSH Installation
