@@ -295,6 +295,12 @@ Welcome to GitLab, @{user}!
 
 Set environment variables in the `~/.bash_profile` by typing `export {variable}='{definition}'` and then do `source ~/.bash_profile` to update the source.
 
+# Building Docker Images
+
+
+`docker build -t {new_image_name} .`
+`docker-compose up`
+
 
 # ZSH Installation
 
