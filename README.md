@@ -291,10 +291,6 @@ $ ssh -T git@gitlab.work.io
 Welcome to GitLab, @{user}!
 ```
 
-# Best practices for working with AWS keys
-
-Set environment variables in the `~/.bash_profile` by typing `export {variable}='{definition}'` and then do `source ~/.bash_profile` to update the source.
-
 # Building Docker Images
 
 Every time the docker image is {re}built, run this from the main directory (the one with `Dockerfile`):
@@ -325,3 +321,11 @@ If you'd like to mount an efs on your aws:
 2. Change the config file with `awscli configure`.
 3. Change the security group of your ec2 instance to add the efs following the instructions in the efs page.
 
+
+### Working with Keys
+
+Set environment variables in the `~/.bash_profile` by typing `export {variable}='{definition}'` and then do `source ~/.bash_profile` to update the source.
+
+### Boto3
+
+To load a file:
