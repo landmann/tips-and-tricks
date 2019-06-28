@@ -303,6 +303,10 @@ And then run this command where the `docker-compose.yml` file is:
 $docker-compose up
 ```
 
+If you're pulling from an aws image to build the docker image at hand, make sure you've already set up aws on your machine, and type 
+```
+$(aws ecr get-login --no-include-email)
+```
 
 # ZSH Installation
 
