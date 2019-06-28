@@ -307,6 +307,8 @@ If you're pulling from an aws image to build the docker image at hand, make sure
 ```
 $(aws ecr get-login --no-include-email)
 ```
+Lastly, make sure to visit `docker/.env` folder and set your environment variables right!
+
 
 # ZSH Installation
 
