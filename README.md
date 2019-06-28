@@ -309,6 +309,8 @@ $(aws ecr get-login --no-include-email)
 ```
 Lastly, make sure to visit `docker/.env` folder and set your environment variables right!
 
+If you're using **PyCharm**, go to Settings -> Project -> Project Interpreter -> Docker -> Image Name: {YOUR IMAGE}
+
 
 # ZSH Installation
 
