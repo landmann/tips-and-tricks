@@ -334,6 +334,61 @@ If you'd like to mount an efs on your aws:
 
 Set environment variables in the `~/.bash_profile` by typing `export {variable}='{definition}'` and then do `source ~/.bash_profile` to update the source.
 
-### Boto3
+### Boto3 and S3 Readings
 
-To load a file:
+#### To write a file:
+You first need to establish your credentials in `~/.aws/credentials`:
+
+```
+[default]
+aws_access_key_id = YOUR_ACCESS_KEY_ID
+aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
+```
+
+and in `~/.aws/config` add:
+
+```
+[default]
+region = YOUR_PREFERRED_REGION
+```
+
+where you can find the regions [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region).
+
+Finally, to upload, type:
+```
+import boto3
+s3_resource = boto3.resource('s3')
+
+s3_resource.Object(first_bucket_name, first_file_name).upload_file(
+    Filename=first_file_name)
+    
+```
+
+
+
+#### To load a file:
+
+```
+import boto3
+BUCKET_NAME='{BUCKETNAME}'
+
+client = boto3.client('s3') #low-level functional API
+resource = boto3.resource('s3') #high-level object-oriented API
+bucket = resource.Bucket(BUCKET_NAME) #subsitute this for your s3 bucket name. 
+
+for x in bucket.objects.filter(Prefix='{DATAPATH_OF_FILE}').all():
+    files.append(x)
+    
+file = [x.key for x in files if x.key.endswith('.csv')][0] ## Read the csv file only.
+obj = client.get_object(Bucket=BUCKET_NAME, Key=file)
+df_raw = pd.read_csv(obj['Body'])
+```
+Or to download a file:
+```
+s3_resource.Object(first_bucket_name, first_file_name).download_file(
+    f'/tmp/{first_file_name}') # Python 3.6+
+```
+
+
+
+
