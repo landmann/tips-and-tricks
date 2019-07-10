@@ -20,14 +20,17 @@ My vimrc is a combination of many things I've read in the iternet that have work
 
 - He uses backslash '\' quite extensively in his vim mode. For example, `\o` toggles paste mode and `\l` toggles line numbers:
 
-  `nmap \l :setlocal number!<CR>`<br>
-  `nmap \o :set paste!<CR>`
-
+```
+  nmap \l :setlocal number!<CR>
+  nmap \o :set paste!<CR>
+```
 
 - <b>Scrolling through wrapped around text</b>
 
-  `nnoremap j gj`<br>
-  `nnoremap k gk`<br>
+```
+nnoremap j gj
+nnoremap k gk
+```
 
 - If you like Emacs-style movements, he proposes some. I don't use them.
 
@@ -339,7 +342,7 @@ Set environment variables in the `~/.bash_profile` by typing `export {variable}=
 #### To write a file:
 You first need to establish your credentials in `~/.aws/credentials`:
 
-```
+```bash
 [default]
 aws_access_key_id = YOUR_ACCESS_KEY_ID
 aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
@@ -347,7 +350,7 @@ aws_secret_access_key = YOUR_SECRET_ACCESS_KEY
 
 and in `~/.aws/config` add:
 
-```
+```bash
 [default]
 region = YOUR_PREFERRED_REGION
 ```
@@ -355,7 +358,7 @@ region = YOUR_PREFERRED_REGION
 where you can find the regions [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region).
 
 Finally, to upload, type:
-```
+```python
 import boto3
 s3_resource = boto3.resource('s3')
 
@@ -368,7 +371,7 @@ s3_resource.Object(first_bucket_name, first_file_name).upload_file(
 
 #### To load a file:
 
-```
+```python
 import boto3
 BUCKET_NAME='{BUCKETNAME}'
 
@@ -384,7 +387,7 @@ obj = client.get_object(Bucket=BUCKET_NAME, Key=file)
 df_raw = pd.read_csv(obj['Body'])
 ```
 Or to download a file:
-```
+```python
 s3_resource.Object(first_bucket_name, first_file_name).download_file(
     f'/tmp/{first_file_name}') # Python 3.6+
 ```
