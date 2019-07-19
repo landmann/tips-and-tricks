@@ -359,12 +359,19 @@ where you can find the regions [here](https://docs.aws.amazon.com/general/latest
 
 Finally, to upload, type:
 ```python
-import boto3
-s3_resource = boto3.resource('s3')
 
-s3_resource.Object(first_bucket_name, first_file_name).upload_file(
-    Filename=first_file_name)
-    
+bucketName = "Your S3 BucketName"
+Key = "Original Name and type of the file you want to upload into s3"
+outPutname = "Output file name(The name you want to give to the file after we upload to s3)"
+
+import pickle
+pickle.dump(data, open("tmp.pckl", 'wb'))
+
+s3 = boto3.client('s3')
+s3.upload_file("tmp.pckl", bucketName, outPutname)
+
+!rm tmp.pckl
+
 ```
 
 
@@ -388,7 +395,10 @@ df_raw = pd.read_csv(obj['Body'])
 ```
 Or to download a file:
 ```python
-s3_resource.Object(first_bucket_name, first_file_name).download_file(
+BUCKET_NAME='{BUCKETNAME}'
+
+
+s3_resource.Object(BUCKET_NAME, first_file_name).download_file(
     f'/tmp/{first_file_name}') # Python 3.6+
 ```
 
