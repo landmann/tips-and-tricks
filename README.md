@@ -364,7 +364,6 @@ If you want to add the credentials to your local notebook, add
 s3 = boto3.client('s3', 
                   aws_access_key_id= "YOUR_ACCESS_KEY_ID",
                   aws_secret_access_key = "YOUR_SECRET_ACCESS_KEY")
-                  
 ```
 
 
@@ -382,7 +381,6 @@ s3 = boto3.client('s3')
 s3.upload_file("tmp.pckl", bucketName, outPutname)
 
 !rm tmp.pckl
-
 ```
 
 
