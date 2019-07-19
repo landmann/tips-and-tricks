@@ -357,6 +357,17 @@ region = YOUR_PREFERRED_REGION
 
 where you can find the regions [here](https://docs.aws.amazon.com/general/latest/gr/rande.html#s3_region).
 
+
+If you want to add the credentials to your local notebook, add
+
+```python
+s3 = boto3.client('s3', 
+                  aws_access_key_id= "YOUR_ACCESS_KEY_ID",
+                  aws_secret_access_key = "YOUR_SECRET_ACCESS_KEY")
+                  
+```
+
+
 Finally, to upload, type:
 ```python
 
