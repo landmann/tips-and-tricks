@@ -465,6 +465,8 @@ dist/
 
 Now install the package to your local env.
 ```bash
+# If already installed, make sure to uninstall so package can be updated.
+pip uninstall dist/example_pkg_your_username-0.0.1-py3.none.any.whl
 pip install dist/example_pkg_your_username-0.0.1-py3.none.any.whl
 ```
 
