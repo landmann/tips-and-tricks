@@ -412,5 +412,63 @@ s3_resource.Object(BUCKET_NAME, first_file_name).download_file(
 ```
 
 
+# Distribution Wheels
+
+This is a guide to create a wheel and install it locally. For PyPI distributions, see [here](https://packaging.python.org/tutorials/packaging-projects/).
+
+Make sure the appropriate folders to be included to the distribution wheel all contain an `__init__.py` file, which can be empty.
+
+To do this, you'll need to install the `setuptools wheel` package from `pip`:
+
+```bash
+python3 -m pip install --user --upgrade setuptools wheel
+```
+
+### setup.py file
+
+First, add a `setup.py` file in the root folder, which should look something like this:
+
+```python
+import setuptools
+
+setuptools.setup(
+    name="example-pkg-your-username",
+    version="0.0.1",
+    author="Example Author",
+    author_email="author@example.com",
+    description="A small example package",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
+    url="https://github.com/pypa/sampleproject",
+    packages=setuptools.find_packages(),
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+)
+```
+
+### Generating the wheel
+
+Run this command:
+```bash
+python3 setup.py sdist bdist_wheel
+```
+
+and make sure that the dist folder looks as follows:
+```bash
+dist/
+  example_pkg_your_username-0.0.1-py3-none-any.whl
+  example_pkg_your_username-0.0.1.tar.gz
+```
+
+Now install the package to your local env.
+```bash
+pip install dist/example_pkg_your_username-0.0.1-py3.none.any.whl
+```
+
+
+
 
 
