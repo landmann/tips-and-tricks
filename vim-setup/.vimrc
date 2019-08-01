@@ -14,6 +14,7 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
 Plugin 'Yggdroot/indentLine'
+Plugin 'wincent/terminus'
 call vundle#end()
 
 execute pathogen#infect()
