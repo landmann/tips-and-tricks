@@ -294,6 +294,7 @@ $ ssh -T git@gitlab.work.io
 Welcome to GitLab, @{user}!
 ```
 
+
 # Building Docker Images
 
 Every time the docker image is {re}built, run this from the main directory (the one with `Dockerfile`):
@@ -326,6 +327,12 @@ A Power Shell is a huge timesaver.  It'll help you navigate through files a lot 
 
 
 # AWS Instance
+
+First things first, to tunnel into your aws instance, type this:
+
+```bash
+ssh -i "PEM.pem" -L {YOUR_PORT_NUMBER}:localhost:{EC2_PORT_NUMBER} ubuntu@ec2-YOUR-EC2-ROUTE-.amazonaws.com
+```
 
 If you'd like to mount an efs on your aws:
 1. install awscli: `pip install awscli --upgrade --user`
