@@ -1,4 +1,4 @@
-// Configure CodeMirror Keymap
+// Configure CodeMirror Keymap jk, etc.
 require([
   'nbextensions/vim_binding/vim_binding',   // depends your installation
 ], function() {
@@ -52,7 +52,7 @@ require([
   //CodeMirror.Vim.map("<C-k>", "k", "normal");
 });
 
-// Configure Jupyter Keymap
+// Change cell types with Ctrl-#
 require([
   'nbextensions/vim_binding/vim_binding',
   'base/js/namespace',
@@ -71,4 +71,16 @@ require([
     // Update Help
     km.edit_shortcuts.events.trigger('rebuild.QuickHelp');
   });
+});
+
+// using :q to leave Vim mode and re-enter Jupyter mode
+require([
+	'base/js/namespace',
+	'codemirror/keymap/vim',
+	'nbextensions/vim_binding/vim_binding'
+], function(ns) {
+	CodeMirror.Vim.defineEx("quit", "q", function(cm){
+		ns.notebook.command_mode();
+		ns.notebook.focus_cell();
+	});
 });
