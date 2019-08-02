@@ -11,6 +11,47 @@ require([
   CodeMirror.Vim.map("gk", "<Plug>(vim-binding-k)", "normal");
 });
 
+// Move around in Insert mode with Ctrl-h/j/k/l
+require([
+  'nbextensions/vim_binding/vim_binding',
+], function() {
+  // Use Ctrl-h/l/j/k to move around in Insert mode
+  CodeMirror.Vim.defineAction('[i]<C-h>', function(cm) {
+    var head = cm.getCursor();
+    CodeMirror.Vim.handleKey(cm, '<Esc>');
+    if (head.ch <= 1) {
+      CodeMirror.Vim.handleKey(cm, 'i');
+    } else {
+      CodeMirror.Vim.handleKey(cm, 'h');
+      CodeMirror.Vim.handleKey(cm, 'a');
+    }
+  });
+  CodeMirror.Vim.defineAction('[i]<C-l>', function(cm) {
+    var head = cm.getCursor();
+    CodeMirror.Vim.handleKey(cm, '<Esc>');
+    if (head.ch === 0) {
+      CodeMirror.Vim.handleKey(cm, 'a');
+    } else {
+      CodeMirror.Vim.handleKey(cm, 'l');
+      CodeMirror.Vim.handleKey(cm, 'a');
+    }
+  });
+  CodeMirror.Vim.mapCommand("<C-h>", "action", "[i]<C-h>", {}, { "context": "insert" });
+  CodeMirror.Vim.mapCommand("<C-l>", "action", "[i]<C-l>", {}, { "context": "insert" });
+  CodeMirror.Vim.map("<C-j>", "<Esc>ja", "insert");
+  CodeMirror.Vim.map("<C-k>", "<Esc>ka", "insert");
+
+  // Use Ctrl-h/l/j/k to move around in Normal mode
+  // otherwise it would trigger browser shortcuts
+  CodeMirror.Vim.map("<C-h>", "h", "normal");
+  CodeMirror.Vim.map("<C-l>", "l", "normal");
+  // Updated for v2.0.0
+  // While jupyter-vim-binding use <C-j>/<C-k> to move around cell
+  // The following key mappings should not be defined
+  //CodeMirror.Vim.map("<C-j>", "j", "normal");
+  //CodeMirror.Vim.map("<C-k>", "k", "normal");
+});
+
 // Configure Jupyter Keymap
 require([
   'nbextensions/vim_binding/vim_binding',
