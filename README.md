@@ -315,6 +315,10 @@ Lastly, make sure to visit `docker/.env` folder and set your environment variabl
 
 If you're using **PyCharm**, go to Settings -> Project -> Project Interpreter -> Docker -> Image Name: {YOUR IMAGE}
 
+### Some more helpful Docker commands
+
+* Use `docker ps` to get the name of the existing containers.
+* Use the command `docker exec -it <container name> /bin/bash` to get a bash shell in the container
 
 # ZSH Installation
 
