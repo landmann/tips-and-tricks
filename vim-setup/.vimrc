@@ -57,6 +57,8 @@ nmap <C-H> <C-W><C-H>
 nmap \l :setlocal number!<CR>
 "Toggle paste mode:
 nmap \o :set paste!<CR>
+"Run script with :R
+command R !./%
 "Change between files
 nmap <C-e> :e#<CR>
 "Cycle through files
