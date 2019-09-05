@@ -90,6 +90,18 @@ endif
 This guide sets you up for working in IPython with Jupyter using VIM commands, with a few personalized modifications.  You can get more info by going to the specific sites, but these are too wordy and cumbersom for a quick setup.
 
 
+#### 0. Useful code
+Use this decorator so that when something changes in the module it is immediately reflected on the notebook.
+
+```python
+# These reload the functions - change something on the imported files and 
+#  %autoreload 2 will reload all modules (except those excluded by %aimport) 
+#  every time before executing the Python code typed.
+%load_ext autoreload
+%autoreload 2
+```
+
+
 #### 1. Install <a href=https://github.com/ipython-contrib/jupyter_contrib_nbextensions#installation>nbextensions</a> :
 
 ```bash  
@@ -349,6 +361,7 @@ If you'd like to mount an efs on your aws:
 Set environment variables in the `~/.bash_profile` by typing `export {variable}='{definition}'` and then do `source ~/.bash_profile` to update the source.
 
 ### Boto3 and S3 Readings
+Refer to the `s3manager.py` file for a simple way to read and write to s3.
 
 #### To write a file:
 You first need to establish your credentials in `~/.aws/credentials`:
