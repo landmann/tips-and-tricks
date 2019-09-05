@@ -91,8 +91,9 @@ This guide sets you up for working in IPython with Jupyter using VIM commands, w
 
 
 #### 0. Useful code
-Use this decorator so that when something changes in the module it is immediately reflected on the notebook.
 
+<b> Notebook Immediate Reload</b>
+Use this decorator so that when something changes in the module it is immediately reflected on the notebook.
 ```python
 # These reload the functions - change something on the imported files and 
 #  %autoreload 2 will reload all modules (except those excluded by %aimport) 
@@ -100,6 +101,8 @@ Use this decorator so that when something changes in the module it is immediatel
 %load_ext autoreload
 %autoreload 2
 ```
+<b> Appending Parent Path </b>
+
 
 
 #### 1. Install <a href=https://github.com/ipython-contrib/jupyter_contrib_nbextensions#installation>nbextensions</a> :
