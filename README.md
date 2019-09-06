@@ -194,6 +194,8 @@ require([
     km.edit_shortcuts.add_shortcut('ctrl-2', 'vim-binding:change-cell-to-markdown', true);
     // Allow Ctrl-3 to change the cell mode into Raw in Vim normal mode
     km.edit_shortcuts.add_shortcut('ctrl-3', 'vim-binding:change-cell-to-raw', true);
+    // Allow Ctrl-c to interrupt kernel
+    km.edit_shortcuts.add_shortcut('ctrl-c', 'jupyter-notebook:interrupt-kernel', true);
     
     // Update Help
     km.edit_shortcuts.events.trigger('rebuild.QuickHelp');
