@@ -4,6 +4,7 @@ filetype off
 set splitright
 set undofile
 
+
 " Keep Plugin commands between vundel#begin/end.
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -14,6 +15,7 @@ Plugin 'scrooloose/nerdtree.git'
 Plugin 'xolox/vim-misc'
 Plugin 'xolox/vim-notes'
 Plugin 'Yggdroot/indentLine'
+Plugin 'scrooloose/nerdcommenter'
 Plugin 'wincent/terminus'
 call vundle#end()
 
@@ -113,7 +115,11 @@ let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
 
 "indentLine
-let g:indentLine_setColors = 0
+"let g:indentLine_setColors = 0
+
+" highlight word that moves past 80 character line
+highlight ColorColumn ctermbg=Gray
+call matchadd("ColorColumn", '\%81v', 100)
 
 "Emacs style movement
 cnoremap <C-a> <Home>
@@ -128,6 +134,33 @@ cnoremap <Esc>f <S-Right>
 cnoremap <Esc>d <S-right><Delete>
 cnoremap <C-g> <C-c>
 
+
+"" NerdComment
+" Add spaces after comment delimiters by default
+nmap <C-_>   <Plug>NERDCommenterToggle
+vmap <C-_>   <Plug>NERDCommenterToggle<CR>gv
+let g:NERDSpaceDelims = 1
+
+" Use compact syntax for prettified multi-line comments
+let g:NERDCompactSexyComs = 1
+
+" Align line-wise comment delimiters flush left instead of following code indentation
+let g:NERDDefaultAlign = 'left'
+
+" Set a language to use its alternate delimiters by default
+let g:NERDAltDelims_java = 1
+
+" Add your own custom formats or override the defaults
+let g:NERDCustomDelimiters = { 'c': { 'left': '/**','right': '*/' } }
+
+" Allow commenting and inverting empty lines (useful when commenting a region)
+let g:NERDCommentEmptyLines = 1
+
+" Enable trimming of trailing whitespace when uncommenting
+let g:NERDTrimTrailingWhitespace = 1
+
+" Enable NERDCommenterToggle to check all selected lines is commented or not 
+let g:NERDToggleCheckAllLines = 1
 
 
 
