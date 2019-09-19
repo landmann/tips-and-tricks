@@ -10,7 +10,7 @@ My vimrc is a combination of many things I've read in the iternet that have work
 
 ### Quick Install
 
-- Type `locate .vimrc` and clone the contents of this repo into said directory.
+- Type `locate .vimrc` and clone the contents of this repo into said directory. If it doesn't exist, you can just download it in the home directory, or `~/.`.
 - Install Pathogen, as described [here](https://github.com/tpope/vim-pathogen).<br>
   -TL;DR:
   ```
