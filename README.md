@@ -312,7 +312,15 @@ Welcome to GitLab, @{user}!
 ```
 
 
-# Building Docker Images
+# Docker
+
+## Installing Docker
+If you wish to install docker, run the following commands:
+* `wget get.docker.com -O get_docker.sh`
+* `sh get_docker.sh`
+* Config @ bottom to log in.
+
+## Managing Docker Images
 
 Every time the docker image is {re}built, run this from the main directory (the one with `Dockerfile`):
 ```
