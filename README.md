@@ -11,18 +11,18 @@ My vimrc is a combination of many things I've read in the iternet that have work
 ### Quick Install
 
 - Type `locate .vimrc` and clone the contents of this repo into said directory.
-- Install Pathogen, as described [here](https://github.com/tpope/vim-pathogen).
+- Install Pathogen, as described [here](https://github.com/tpope/vim-pathogen).<br>
   -TL;DR:
   ```
   mkdir -p ~/.vim/autoload ~/.vim/bundle && \
   curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
   ```
-- Install Vundle as described [here](https://github.com/VundleVim/Vundle.vim).
+- Install Vundle as described [here](https://github.com/VundleVim/Vundle.vim).<br>
   -TD;DR:
   ```
   git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
   ```
-    - Launch vim and run :PluginInstall
+    - Launch vim and run `:PluginInstall`
     - To install from command line: `vim +PluginInstall +qall`
 
 - Type `source ~/.bashrc` if you're having any issues with these installations to make sure your bash has been updated after these were processed.
