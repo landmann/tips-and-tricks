@@ -6,13 +6,25 @@ Last but not least, I'm in the process of writing a PowerShell guide using [ZSH]
 
 # Terminal Vim
 
-My vimrc is a combination of many things I've read in the iternet that have worked very well for my purposes.  Here's a list of the things I've read that have changed my setup. You can find the vimrc file [here](https://github.com/landmann/vim-setup/blob/master/.vimrc).
+My vimrc is a combination of many things I've read in the iternet that have worked very well for my purposes.  Here's a list of the things I've read that have changed my setup. You can find the vimrc file within.
 
 ### Quick Install
 
 - Type `locate .vimrc` and clone the contents of this repo into said directory.
 - Install Pathogen, as described [here](https://github.com/tpope/vim-pathogen).
+  -TL;DR:
+  ```
+  mkdir -p ~/.vim/autoload ~/.vim/bundle && \
+  curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+  ```
 - Install Vundle as described [here](https://github.com/VundleVim/Vundle.vim).
+  -TD;DR:
+  ```
+  git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+  ```
+    - Launch vim and run :PluginInstall
+    - To install from command line: `vim +PluginInstall +qall`
+
 - Type `source ~/.bashrc` if you're having any issues with these installations to make sure your bash has been updated after these were processed.
 - This one is used quite a bit too: https://github.com/xolox/vim-notes
 
