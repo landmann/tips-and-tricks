@@ -1,16 +1,14 @@
 # Tips and Tricks of the Trade
 
-This guide will take you through a quick setup of [vim on terminal](https://github.com/landmann/vim-setup#terminal-vim), [vim on jupyter](https://github.com/landmann/vim-setup#jupyter-setup), [virtual environments](https://github.com/landmann/vim-setup#virtual-environments), and [ssh keys](https://github.com/landmann/vim-setup#ssh-keys). You may add the contents of this repo into the home directory, `~/.` and follow the instructions on [Quick Install](https://github.com/landmann/vim-setup#quick-install) to install vim on terminal. I have not provided a file for jupyter in this directory, but you can find the code for it below.
-
-Last but not least, I'm in the process of writing a PowerShell guide using [ZSH](https://www.howtogeek.com/362409/what-is-zsh-and-why-should-you-use-it-instead-of-bash/), which you can find at the bottom of [this page](https://github.com/landmann/vim-setup#zsh-installation).
+This guide is an ever growing list of issues or setups I personally encounter frequently enough to document here, but unfrequently enough that I forget them otherwise. 
 
 # Terminal Vim
 
-My vimrc is a combination of many things I've read in the iternet that have worked very well for my purposes.  Here's a list of the things I've read that have changed my setup. You can find the vimrc file within.
+My vimrc is a combination of many things I've read in the iternet that have worked very well for my purposes.  Here's a list of the things I've read that have changed my setup. You may add the contents of this repo into the home directory, `~/.` and follow the instructions on [Quick Install](https://github.com/landmann/vim-setup#quick-install) to install vim on terminal. I have not provided a file for jupyter in this directory, but you can find the code in the Jupyter section below.
 
 ### Quick Install
 
-- Type `locate .vimrc` and clone the contents of this repo into said directory. If it doesn't exist, you can just download it in the home directory, or `~/.`.
+- Type `locate .vimrc` and clone the contents of this repo into said directory. If it doesn't exist, you can just download it in the home directory, `~/.`.
 - Install Pathogen, as described [here](https://github.com/tpope/vim-pathogen).<br>
   -TL;DR:
   ```
