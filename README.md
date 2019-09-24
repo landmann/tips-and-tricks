@@ -520,6 +520,24 @@ pip install dist/example_pkg_your_username-0.0.1-py3.none.any.whl
 ```
 
 
+# Arch Linux
 
+I've started to use ArchLinux at work and it's perfect for it. It has all you need, and nothing more.
+
+## Mapping CapsLock to Ctrl
+First thing I do when using a new ArchLinux computer is to map the `CapsLock` key to `Ctrl`. To do this, add the following to `~/.Xmodmap`
+
+```bash
+clear lock
+clear control
+keycode 66 = Control_L
+add control = Control_L Control_R
+```
+and execute it typing `xmodmap ~/.Xmodmap`.
+
+
+## Baloo File Extractor
+
+Sometimes, the computer will start to lag for no apparent reason. Upon inspecting the computer processes, one may find that the `baloo_file_extractor` is taking up a substantial amount of CPU power. The `baloo_file_extractor` indexes the files on the computer for easy searching, but the process is so slow it makes the computer extremely painful to use. So, there are two things you must do. If you run into this problem, first type `balooctl disable,` then you'll have to restart the computer (Sorry!), and finally enable it again on startup with `balooctl enable`.  Some blogs say to disable balooctl altogether writing `Indexing-Enabled=false` in  `~/.kde4/share/config/baloofilerc`.
 
 
