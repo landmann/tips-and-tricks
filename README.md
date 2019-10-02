@@ -538,4 +538,35 @@ and execute it typing `xmodmap ~/.Xmodmap`.
 
 Sometimes, the computer will start to lag for no apparent reason. Upon inspecting the computer processes, one may find that the `baloo_file_extractor` is taking up a substantial amount of CPU power. The `baloo_file_extractor` indexes the files on the computer for easy searching, but the process is so slow it makes the computer extremely painful to use. So, there are two things you must do. If you run into this problem, first type `balooctl disable,` then you'll have to restart the computer (Sorry!), and finally enable it again on startup with `balooctl enable`.  Some blogs say to disable balooctl altogether writing `Indexing-Enabled=false` in  `~/.kde4/share/config/baloofilerc`.
 
+## Disk Full
+
+My disk often gets full without downloading any large files. Although I haven't found a method to systematically stop this from happening, I often run these diagnostic tools in order to fix the issue.
+
+1. Type `df -h` to get a report of the Filesystem's usage.
+
+```bash
+Filesystem      Size  Used Avail Use% Mounted on
+dev              16G     0   16G   0% /dev
+run              16G  9.4M   16G   1% /run
+/dev/sda6       283G  141G  128G  53% /
+tmpfs            16G  576M   16G   4% /dev/shm
+tmpfs            16G     0   16G   0% /sys/fs/cgroup
+tmpfs            16G  6.7M   16G   1% /tmp
+tmpfs           3.2G   32K  3.2G   1% /run/user/1000
+```
+
+The plcae that was hogging most of my disk space was in `logs`, so check there first:
+
+```
+du -h /var/log
+```
+If so, then type
+```
+sudo rm -vfr /var/log && sudo mkdir /var/log
+```
+
+
+
+
+
 
