@@ -565,7 +565,7 @@ If so, then type
 sudo rm -vfr /var/log && sudo mkdir /var/log
 ```
 
-
+Also, ensure that cups is tarted (typing lpq in a terminal will do). Point your browser to http://localhost:631 Go to Administration. Click Advanced in the "Server Settings" option. You will see an option to set the maximum log size. But I am surprised. It is set by default to 1mb.
 
 
 
