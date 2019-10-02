@@ -566,10 +566,10 @@ The place that was hogging most of my disk space was in `logs`, so check there f
 du -h /var/log
 ```
 
-If it is, in fact, hogging a lot of disk space, see what's being printed in the logs with a simple `head /var/log/error_log`. My issue dealt with some `insecure permissions`, so I just changed the permissions with:
+If it is, in fact, hogging a lot of disk space, see what's being printed in the logs with a simple `head /var/log/error_log`. My issue dealt with some `insecure permissions`, so I just changed the some settings in this file. The first one is `MaxLogSize 1` and `LogLevel none`.
 
 ```
-sudo chmod 755 /usr/lib/cups/*
+sudo vim /etc/cups/cupsd.conf
 ```
 Lastly, remove all the files
 
