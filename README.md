@@ -555,7 +555,7 @@ tmpfs            16G  6.7M   16G   1% /tmp
 tmpfs           3.2G   32K  3.2G   1% /run/user/1000
 ```
 
-The plcae that was hogging most of my disk space was in `logs`, so check there first:
+The place that was hogging most of my disk space was in `logs`, so check there first:
 
 ```
 du -h /var/log
