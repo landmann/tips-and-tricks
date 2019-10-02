@@ -555,17 +555,28 @@ tmpfs            16G  6.7M   16G   1% /tmp
 tmpfs           3.2G   32K  3.2G   1% /run/user/1000
 ```
 
+Then you can check for the files of size > 1G and remove them from your computer.
+```
+sudo find / -size +1G
+```
+
 The place that was hogging most of my disk space was in `logs`, so check there first:
 
 ```
 du -h /var/log
 ```
-If so, then type
+
+If it is, in fact, hogging a lot of disk space, see what's being printed in the logs with a simple `head /var/log/error_log`. My issue dealt with some `insecure permissions`, so I just changed the permissions with:
+
+```
+sudo chmod 755 /usr/lib/cups/*
+```
+Lastly, remove all the files
+
 ```
 sudo rm -vfr /var/log && sudo mkdir /var/log
 ```
 
-Also, ensure that cups is tarted (typing lpq in a terminal will do). Point your browser to http://localhost:631 Go to Administration. Click Advanced in the "Server Settings" option. You will see an option to set the maximum log size. But I am surprised. It is set by default to 1mb.
 
 
 
