@@ -577,7 +577,26 @@ Lastly, remove all the files
 sudo rm -vfr /var/log && sudo mkdir /var/log
 ```
 
+# Databricks
+
+We use databricks for parallel computing. The tutorials are really simple and easy to follow, but I'm extracting the key components to easily replicate what one's done before.
 
 
+## Set up the server
+I would write steps myself, but they're outstandingly well documented here: https://docs.databricks.com/dev-tools/db-connect.html.
+
+## Set up the Databricks CLI (Command line interface)
+
+Databricks CLI instructions can be found here: https://docs.databricks.com/dev-tools/databricks-cli.html#set-up-the-cli.
+
+## In a Notebook
+Finally, to test whether you've correctly set up the interface, type the following:
+
+```python
+from pyspark.sql import SparkSession
+spark = SparkSession.builder.getOrCreate()
+df = spark.read.load({YOUR_DATABRICKS_DATAFRAME})
+display(df.limit(5).toPandas())
+```
 
 
