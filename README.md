@@ -597,6 +597,8 @@ TL;DR:
 
 Oftentimes, the prompt will complain about a missing Java package. If this is the case, install java with `apt install default-jre` [link](https://www.digitalocean.com/community/tutorials/how-to-install-java-with-apt-on-ubuntu-18-04).
 
+If your cluster is not turned on, running step 4 will turn it on slowly but surely.
+
 ## Set up the Databricks CLI (Command line interface)
 
 Databricks CLI instructions can be found here: https://docs.databricks.com/dev-tools/databricks-cli.html#set-up-the-cli.
