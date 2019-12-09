@@ -577,6 +577,12 @@ Lastly, remove all the files
 sudo rm -vfr /var/log && sudo mkdir /var/log
 ```
 
+If you want to kill it, do 
+
+```
+sudo systemctl stop org.cups.cupsd org.cups.cupsd.path org.cups.cupsd.socket
+```
+
 # Databricks
 
 We use databricks for parallel computing. The tutorials are really simple and easy to follow, but I'm extracting the key components to easily replicate what one's done before.
