@@ -520,7 +520,7 @@ pip install dist/example_pkg_your_username-0.0.1-py3.none.any.whl
 
 # Arch Linux
 
-I've started to use ArchLinux at work and it's perfect for it. It has all you need, and nothing more.
+I've started to use ArchLinux at work and it's honestly quite buggy, but it does help you learn about what's happening in the back.
 
 ## Mapping CapsLock to Ctrl
 First thing I do when using a new ArchLinux computer is to map the `CapsLock` key to `Ctrl`. To do this, add the following to `~/.Xmodmap`
@@ -582,6 +582,16 @@ If you want to kill it, do
 ```
 sudo systemctl stop org.cups.cupsd org.cups.cupsd.path org.cups.cupsd.socket
 ```
+
+## Ethernet connection
+
+Sometimes the ethernet connection doesn't work. This has been the fix for me.
+
+Type `ip link` and you'll get a few connections. Find the one that says `link/ether`. In my case, that was `eno1`. Then type 
+```
+sudo ip link set eno1 up
+```
+Wait a few seconds and voila! Internet should be up. Or at least see that the brackets contain `<UP>`.
 
 # Databricks
 
