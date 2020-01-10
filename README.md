@@ -635,6 +635,13 @@ df = spark.read.load({YOUR_DATABRICKS_DATAFRAME})
 display(df.limit(5).toPandas())
 ```
 
+# SFTP
+
+If you often connect to an SFTP via LFTP, you can save your password by adding the following code to your `~/.netrc`:
+```bash
+machine <host.url> login <login id> password <password>
+```
+
 # Chrome
 
 Totally unrelated to coding, but a _huge_ timesaver is to create a URL shortcut for your website. So, instead of typing `stackoverflow.com` you can just type `stacko` and hit enter, redirecting you to the stack overflow website.  To do this, follow these steps:
