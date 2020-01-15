@@ -573,6 +573,14 @@ pip install dist/example_pkg_your_username-0.0.1-py3.none.any.whl
 
 I've started to use ArchLinux at work and it's honestly quite buggy, but it does help you learn about what's happening in the back.
 
+## Copy Files From Terminal to Clipboard
+I use `xclip` on Konsole (the Arch console that is also buggy - particularly with `htop`). To copy a file with xclip, type
+
+```bash
+xclip -sel clip < ~/path/to/file.txt
+```
+Then you can use `Ctrl+V` to paste elsewhere.
+
 ## Mapping CapsLock to Ctrl
 First thing I do when using a new ArchLinux computer is to map the `CapsLock` key to `Ctrl`. To do this, add the following to `~/.Xmodmap`
 
