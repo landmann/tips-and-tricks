@@ -99,6 +99,41 @@ endif
 
 This guide sets you up for working in IPython with Jupyter using VIM commands, with a few personalized modifications.  You can get more info by going to the specific sites, but these are too wordy and cumbersom for a quick setup.
 
+## TL;DR
+
+If you spin up an instance, this will get you up and running immediately.
+
+```
+# Install jupyter nbextensions
+python -m pip install jupyter_contrib_nbextensions && \
+    python -m pip install jupyter_dashboards && \
+    python -m pip install jupyter_nbextensions_configurator && \
+    jupyter contrib nbextension install --user &&\
+    jupyter nbextensions_configurator enable --user &&\
+    jupyter nbextension install --py jupyter_dashboards --sys-prefix
+
+# Install and enable vim extensions
+mkdir -p $(jupyter --data-dir)/nbextensions && \
+    git clone https://github.com/lambdalisue/jupyter-vim-binding $(jupyter --data-dir)/nbextensions/vim_binding
+
+
+chmod -R go-w $(jupyter --data-dir)/nbextensions/vim_binding
+jupyter nbextension enable code_prettify/code_prettify && \
+    jupyter nbextension enable select_keymap/main && \
+    # jupyter nbextension enable vim_binding/vim_binding && \
+    # jupyter nbextension enable ruler/main && \
+    jupyter nbextension enable --py jupyter_dashboards --sys-prefix && \
+    jupyter nbextension enable --py widgetsnbextension && \
+    jupyter nbextension enable execute_time/ExecuteTime
+
+RUN jupyter lab build
+
+# Load up vim customization
+mkdir ~/.jupyter/custom
+wget -P ~/.jupyter/custom/ https://raw.githubusercontent.com/landmann/tips-and-tricks/master/jupyter-setup/custom/custom.css
+wget -P ~/.jupyter/custom/ https://raw.githubusercontent.com/landmann/tips-and-tricks/master/jupyter-setup/custom/custom.js
+```
+
 
 #### 0. Useful code
 
