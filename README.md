@@ -120,8 +120,8 @@ mkdir -p $(jupyter --data-dir)/nbextensions && \
 chmod -R go-w $(jupyter --data-dir)/nbextensions/vim_binding
 jupyter nbextension enable code_prettify/code_prettify && \
     jupyter nbextension enable select_keymap/main && \
-    # jupyter nbextension enable vim_binding/vim_binding && \
-    # jupyter nbextension enable ruler/main && \
+    jupyter nbextension enable vim_binding/vim_binding && \
+    jupyter nbextension enable ruler/main && \
     jupyter nbextension enable --py jupyter_dashboards --sys-prefix && \
     jupyter nbextension enable --py widgetsnbextension && \
     jupyter nbextension enable execute_time/ExecuteTime
