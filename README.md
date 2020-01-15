@@ -326,10 +326,10 @@ Welcome to GitLab, @{user}!
 Jupyter notebook development is becoming the de-facto research environment. To work with Jupyter notebooks remotely, one must tunnel the output of jupyter to view it on a local browser. You can also use a reverse proxy, but I find this more troublesome.
 
 ```bash
-ssh username@xx.xx.xx.xx -NL 1234:localhost:1234
+ssh username@xx.xx.xx.xx -L 1234:localhost:1234
 ```
 
-In the code above, data outgoing to port `1234` will be forwarded to `localhost:1234` from the remote system. Besides them being my initials, the `N` is used to not execute a remote command, signaling the computer it will forward a port instead, and the `L` is used to specify the actual port.
+In the code above, data outgoing to port `1234` will be forwarded to `localhost:1234` from the remote system. The `L` is used to specify the port to forward data to.
 
 Once you're in the machine, start the jupyter notebook as such:
 
