@@ -573,6 +573,15 @@ pip install dist/example_pkg_your_username-0.0.1-py3.none.any.whl
 
 I've started to use ArchLinux at work and it's honestly quite buggy, but it does help you learn about what's happening in the back.
 
+## For a cron job
+
+```bash
+pacman -Syu cronie
+systemctl enable --now cronie.service
+crontab -e
+```
+
+
 ## Copy Files From Terminal to Clipboard
 I use `xclip` on Konsole (the Arch console that is also buggy - particularly with `htop`). To copy a file with xclip, type
 
