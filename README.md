@@ -720,3 +720,10 @@ Totally unrelated to coding, but a _huge_ timesaver is to create a URL shortcut 
 4. In the `Keyword` box, type the shortcut keyword (i.e foo).
 5. In the `URL with %s in place of query` box, type the URL of the website (i.e http://bar.com).
 6. Then, if you type the keyword foo in the address bar, a suggestion named bar will pop up, and by clicking Enter, you will be redirected to http://bar.com.
+
+# PostgreSQL
+
+Having never touched PostgreSQL, here's a naive dive into databases for those using Arch.
+
+1. First, install PostgreSQL following the instructions here: https://github.com/malnvenshorn/OctoPrint-FilamentManager/wiki/Setup-PostgreSQL-on-Arch-Linux
+
