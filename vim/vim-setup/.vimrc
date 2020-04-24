@@ -17,6 +17,7 @@ set undofile
 " Plugin 'Yggdroot/indentLine'
 " Plugin 'scrooloose/nerdcommenter'
 " Plugin 'wincent/terminus'
+" Plugin 'jiangmiao/auto-pairs'
 " call vundle#end()
 "
 " execute pathogen#infect()
