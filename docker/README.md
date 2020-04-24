@@ -33,11 +33,3 @@ If you're using **PyCharm**, go to Settings -> Project -> Project Interpreter ->
 * Use `docker ps` to get the name of the existing containers.
 * Use the command `docker exec -it <container name> /bin/bash` to get a bash shell in the container
 
-# ZSH Installation
-
-A Power Shell is a huge timesaver.  It'll help you navigate through files a lot faster with nice autocomplete, amongst other features.  
-
-### Quick Install
-1. Install zsh from [here](https://www.howtoforge.com/tutorial/how-to-setup-zsh-and-oh-my-zsh-on-linux/)
-
-
