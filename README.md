@@ -2,6 +2,13 @@
 
 This guide is an ever growing list of issues or setups I personally encounter frequently enough to document here, but unfrequently enough that I forget them otherwise.  Feel free to browse!
 
+# ZSH Installation
+
+A Power Shell is a huge timesaver.  It'll help you navigate through files a lot faster with nice autocomplete, amongst other features.  
+
+### Quick Install
+1. Install zsh from [here](https://www.howtoforge.com/tutorial/how-to-setup-zsh-and-oh-my-zsh-on-linux/)
+
 
 # Virtual Environments
 
