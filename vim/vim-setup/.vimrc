@@ -135,8 +135,9 @@ let g:syntastic_check_on_wq = 0
 " cnoremap <Esc>f <S-Right>
 " cnoremap <Esc>d <S-right><Delete>
 " cnoremap <C-g> <C-c>
-"
-"
+" "" NERDTree
+" let NERDTreeMapOpenInTab='\r'
+" 
 " "" NerdComment
 " " Add spaces after comment delimiters by default
 " nmap <C-_>   <Plug>NERDCommenterToggle
