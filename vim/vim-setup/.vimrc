@@ -10,7 +10,7 @@ set undofile
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'davidhalter/jedi-vim'
+" Plugin 'davidhalter/jedi-vim' " Love it, but painfully slow so had to remove.
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/nerdtree.git'
 Plugin 'xolox/vim-misc'
