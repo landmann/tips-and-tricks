@@ -34,16 +34,18 @@ deactivate
 Sometimes the jupyter notebook kernel doesn't start where it should be (`sys.executable` returns the wrong python kernel). This is because our kernel list isn't updated properly. To do so, go to `~/.local/share/jupyter/kernels/{envname}/kernel.json` and change the first parameter in the `argv` list to the python path in your specific kernel.
 
 ```python
-  {
-   argv: [
-    {/path/to/kernel/environment/folder}/bin/python,
-    -m,
-    ipykernel_launcher,
-    -f,
-    {connection_file}
-   ],
-   display_name: env-proprog,
-   language: python
+{
+ "argv": [
+  "path/to/kernel/python",
+  "-m",
+  "ipykernel_launcher",
+  "-f",
+  "{connection_file}"
+ ],
+ "display_name": "Python 3 (ipykernel)",
+ "language": "python",
+ "metadata": {
+  "debugger": true
  }
 ```
 
