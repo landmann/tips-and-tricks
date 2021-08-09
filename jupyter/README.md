@@ -33,8 +33,8 @@ RUN jupyter lab build
 
 # Load up vim customization
 mkdir ~/.jupyter/custom
-wget -P ~/.jupyter/custom/ https://raw.githubusercontent.com/landmann/tips-and-tricks/master/jupyter-setup/custom/custom.css
-wget -P ~/.jupyter/custom/ https://raw.githubusercontent.com/landmann/tips-and-tricks/master/jupyter-setup/custom/custom.js
+wget -P ~/.jupyter/custom/ https://raw.githubusercontent.com/landmann/tips-and-tricks/master/jupyter/custom.js
+wget -P ~/.jupyter/custom/ https://raw.githubusercontent.com/landmann/tips-and-tricks/master/jupyter/custom.css
 ```
 
 
