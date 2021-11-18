@@ -19,6 +19,7 @@ Plugin 'Yggdroot/indentLine'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'wincent/terminus'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'tomlion/vim-solidity'
 call vundle#end()
 
 execute pathogen#infect()
