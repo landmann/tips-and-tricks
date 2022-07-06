@@ -8,7 +8,7 @@ A Power Shell is a huge timesaver.  It'll help you navigate through files a lot 
 
 ### Quick Install
 1. Install zsh from [here](https://www.howtoforge.com/tutorial/how-to-setup-zsh-and-oh-my-zsh-on-linux/)
-
+2. Install the theme [here](https://github.com/romkatv/powerlevel10k#installation)
 
 # Virtual Environments
 
