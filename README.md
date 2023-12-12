@@ -16,7 +16,7 @@ If you want to work with a virtual env (which you absolutely should if you're no
 
 ```bash
 NEWENVNAME=envname
-NEWENV_PYTHON_VERSION=python3.6
+NEWENV_PYTHON_VERSION=python3.11
 
 pip3 install virtualenv
 virtualenv --python=$NEWENV_PYTHON_VERSION $NEWENVNAME
