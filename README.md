@@ -15,7 +15,7 @@ A Power Shell is a huge timesaver.  It'll help you navigate through files a lot 
 If you want to work with a virtual env (which you absolutely should if you're not using a containerized solution), run these commands:
 
 ```bash
-NEWENVNAME=envname
+NEWENVNAME=tryiton
 NEWENV_PYTHON_VERSION=python3.11
 
 pip3 install virtualenv
