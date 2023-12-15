@@ -57,7 +57,7 @@ And voila - you should be in the env. Now come the packages...
 4. Install all the pip menagerie
 
 ```
-pip install numpy pandas scipy matplotlib scikit-learn tensorflow jupyter awscli jupyterlab-vim boto3 python-dotenv tqdm openai opencv-python Pillow diffusers transformers accelerate safetensors pytz boto3 rsa python-dotenv omegaconf mediapipe opencv-python-headless
+pip install numpy pandas scipy matplotlib scikit-learn tensorflow jupyter awscli jupyterlab-vim boto3 python-dotenv tqdm openai opencv-python Pillow diffusers transformers accelerate safetensors pytz boto3 rsa python-dotenv omegaconf mediapipe opencv-python-headless controlnet-aux xformers PySocks
 aws configure
 python -m ipykernel install --user --name=myenv --display-name="MyProject"
 ```
