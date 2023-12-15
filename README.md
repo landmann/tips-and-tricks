@@ -10,6 +10,64 @@ A Power Shell is a huge timesaver.  It'll help you navigate through files a lot 
 1. Install zsh from [here](https://www.howtoforge.com/tutorial/how-to-setup-zsh-and-oh-my-zsh-on-linux/)
 2. Install the theme [here](https://github.com/romkatv/powerlevel10k#installation)
 
+# Brand new ec2 instance for ML research!
+
+In order to do ML research, choose a `g5.large` with at least 50 GB of storage (just installing diffusers and pytorch is half of that). It'll be quite expensive, so remember to stop the machine 
+
+I prefer to start with an ubuntu machine as the aws instance comes with CentOS I believe. The aws instance has performance improvements, but for jupyter notebook work it shouldn't matter.
+
+Once you're set up, `ssh` into the machine and let's get started!
+
+0. First things first, if you're gonna use a notebook, this will save you a lot of trouble:
+
+```
+echo "alias start='source myenv/bin/activate" >> ~/.bashrc
+echo "alias jupyter='jupyter notebook --no-browser --port 1234'" >> ~/.bashrc
+source ~/.bashrc
+```
+
+1. Get your machine up to date on the latest packages:
+
+```
+sudo apt update
+sudo apt upgrade -y
+```
+It'll ask you to reboot the machine. Go do it.
+
+2. Install Python. This should install the latest distribution.
+
+```
+sudo apt install python3
+sudo apt install python3-pip
+sudo apt install build-essential libssl-dev libffi-dev python3-dev
+```
+3. Install a virtual environment (you can see below for more details)
+
+Note that `pip3` and `pip` are the same :) 
+```
+sudo apt install python3.10-venv
+pip3 install virtualenv
+python3 -m venv myenv
+source myenv/bin/activate
+
+```
+And voila - you should be in the env. Now come the packages...
+
+4. Install all the pip menagerie
+
+```
+pip install numpy pandas scipy matplotlib scikit-learn tensorflow
+pip install jupyter awscli jupyterlab-vim
+aws configure
+python -m ipykernel install --user --name=myenv --display-name="MyProject"
+```
+
+5. And lastly, some cuda stuffs
+```
+sudo apt install nvidia-cuda-toolkit
+
+```
+
 # Virtual Environments
 
 If you want to work with a virtual env (which you absolutely should if you're not using a containerized solution), run these commands:
