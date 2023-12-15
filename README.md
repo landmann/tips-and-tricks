@@ -31,15 +31,16 @@ source ~/.bashrc
 ```
 sudo apt update
 sudo apt upgrade -y
+sudo apt install git 
+sudo apt install gh
+gh auth login
 ```
 It'll ask you to reboot the machine. Go do it.
 
 2. Install Python. This should install the latest distribution.
 
 ```
-sudo apt install python3
-sudo apt install python3-pip
-sudo apt install build-essential libssl-dev libffi-dev python3-dev
+sudo apt install python3 python3-pip build-essential libssl-dev libffi-dev python3-dev pkg-config
 ```
 3. Install a virtual environment (you can see below for more details)
 
@@ -56,17 +57,33 @@ And voila - you should be in the env. Now come the packages...
 4. Install all the pip menagerie
 
 ```
-pip install numpy pandas scipy matplotlib scikit-learn tensorflow
-pip install jupyter awscli jupyterlab-vim
+pip install numpy pandas scipy matplotlib scikit-learn tensorflow jupyter awscli jupyterlab-vim boto3 python-dotenv tqdm openai opencv-python Pillow diffusers transformers accelerate safetensors pytz boto3 rsa python-dotenv omegaconf mediapipe opencv-python-headless
 aws configure
 python -m ipykernel install --user --name=myenv --display-name="MyProject"
 ```
 
-5. And lastly, some cuda stuffs
+5. And lastly, some cuda stuffs! First, check if you have GPUs with `lspci`. If you do have an NVIDIA GPU (mine shows like this: 00:1e.0 3D controller: NVIDIA Corporation GA102GL [A10G] (rev a1)), do the below, which I got from [here](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/install-nvidia-driver.html)
 ```
 sudo apt install nvidia-cuda-toolkit
+sudo apt-get upgrade -y linux-aws
+sudo apt-get install -y gcc make linux-headers-$(uname -r)
+cat << EOF | sudo tee --append /etc/modprobe.d/blacklist.conf
+GRUB_CMDLINE_LINUX="rdblacklist=nouveau"
+sudo update-grub
+aws s3 cp --recursive s3://ec2-linux-nvidia-drivers/latest/ .
+chmod +x NVIDIA-Linux-x86_64*.run
+sudo /bin/sh ./NVIDIA-Linux-x86_64*.run
+sudo touch /etc/modprobe.d/nvidia.conf
+echo "options nvidia NVreg_EnableGpuFirmware=0" | sudo tee --append /etc/modprobe.d/nvidia.conf
+
+nvidia-smi -q | head
+```
+And that's it! Now go ahead and fully reboot the instance...
 
 ```
+sudo reboot
+```
+
 
 # Virtual Environments
 
