@@ -12,7 +12,7 @@ A Power Shell is a huge timesaver.  It'll help you navigate through files a lot 
 
 # Brand new ec2 instance for ML research!
 
-In order to do ML research, choose a `g5.large` with at least 50 GB of storage (just installing diffusers and pytorch is half of that). It'll be quite expensive, so remember to stop the machine 
+In order to do ML research, choose a `g5.large` with at least 250 GB of storage to load all the modules and models. It's not too expensive - something like $300 a year. It'll be quite expensive, so remember to stop the machine 
 
 I prefer to start with an ubuntu machine as the aws instance comes with CentOS I believe. The aws instance has performance improvements, but for jupyter notebook work it shouldn't matter.
 
